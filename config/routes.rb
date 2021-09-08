@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get 'message/chat'
+  resources :messages, only: %i[new create]
+  root 'landing#index'
 end
